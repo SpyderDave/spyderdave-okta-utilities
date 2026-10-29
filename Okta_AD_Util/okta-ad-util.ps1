@@ -7,7 +7,7 @@
 # 2. --CSV <Filename> 
 #   In this mode, the users will be extracted from the CSV file and Added or Updated in Okta. 
 # 3. --GetIDs <true|false>
-#   In this mode, we connect to Corp AD and retrieve all Telus Health TID's and XID's and write them to a CSV
+#   In this mode, we connect to Corp AD and retrieve all corporate TID's and XID's and write them to a CSV
 
 # Example:
 # .\AD_TO_OKTA.ps1 --TID T123456 --FirstName John --LastName Doe --Email XXXXXXXXXXXXXXXXXX
@@ -69,7 +69,7 @@ if ($Activate) {
 }
 
 Write-Host "===================================================="
-Write-Host "THCP Okta User Creation Tool"
+Write-Host "Okta User Creation Tool"
 Write-Host "===================================================="
 if ($D) {
     $global:DebugPreference = "Continue"
@@ -402,7 +402,7 @@ else {
     Write-Host "*************************************************************************"
     Write-Host "Okta User ID Retrieval Mode"
     Write-Host "*************************************************************************"    # Get users and display them
-    $usersList = Get-OktaUsers -emailDomain "telus.com" -customProfileField "employeeNumber"
+    $usersList = Get-OktaUsers -emailDomain "example.com" -customProfileField "employeeNumber"
     $usersList | Format-Table -AutoSize
     $Now = (Get-Date).tostring("yyyyMMddhhmmss")
     $outFile = $PSScriptRoot + "\oktaUsers-" + $Now + ".csv"

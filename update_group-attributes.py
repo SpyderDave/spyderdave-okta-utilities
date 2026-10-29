@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 # Configuration
 # ---------------------------------------------------
 
-OKTA_DOMAIN = os.getenv("OKTA_DOMAIN", "https://telushealth.okta.com")
+OKTA_DOMAIN = os.getenv("OKTA_DOMAIN", "https://yourorg.okta.com")
 OKTA_TOKEN = os.getenv("OKTA_TOKEN", "your_token_here")
 
 SEARCH_TERMS = ["ag-wiz-"]  # default; overridden by --search-term CLI argument

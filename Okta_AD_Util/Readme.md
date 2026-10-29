@@ -1,10 +1,10 @@
 # PURPOSE
 
-Powershell script to allow the management of Okta Users with seamless updating from the Telus Corp AD
+Powershell script to allow the management of Okta Users with seamless updating from the corporate AD
 
 # Requirements
 
-You must run this script from a Telus Managed Windows workstation/laptop.
+You must run this script from a corporate-managed Windows workstation/laptop.
 
 To use this script, you must set two environment variables:
 
@@ -15,7 +15,7 @@ Example:
 
 **Powershell**
 
-$env:OKTA_ORG_URL="https://telushealth-oie.oktapreview.com"
+$env:OKTA_ORG_URL="https://yourorg.oktapreview.com"
 
 $env:OKTA_API_TOKEN="my_super_scary_token"
 
@@ -45,7 +45,7 @@ In this mode, the users will be extracted from the CSV file and Added or Updated
 
 --GetIDs <true|false>
 
-In this mode, we connect to Corp AD and retrieve all Telus Health TID's and XID's and write them to a CSV
+In this mode, we connect to Corp AD and retrieve all corporate TID's and XID's and write them to a CSV
 
 Examples:
 .\AD_TO_OKTA.ps1 --TID T123456 --FirstName John --LastName Doe --Email john.doe@nodomain.com

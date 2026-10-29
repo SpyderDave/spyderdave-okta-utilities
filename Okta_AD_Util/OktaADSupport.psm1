@@ -1,5 +1,5 @@
 #
-# THCP Okta / AD Support Functions
+# Okta / AD Support Functions
 #
 $LogDate = (Get-Date).tostring("yyyyMMddhhmmss")
 
